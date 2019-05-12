@@ -9,7 +9,12 @@ public class HUDController : MonoBehaviour
 	public Text timeText;
 	float startTime;
 
-	public Text heartCountText;
+    public Text scoreText;
+    float currentScore;
+
+    // ---------------------------------------------------
+
+    public Text heartCountText;
 	private int heartCount;
 
 	public Text diamondCountText;
@@ -20,10 +25,15 @@ public class HUDController : MonoBehaviour
 
 	public Image healthBar;
 
-	public Text scoreText;
-	float currentScore;
+    // ---------------------------------------------------
 
-	float t;
+    public Text firstObjectiveText;
+    public Text secondObjectiveText;
+    public Text thirdObjectiveText;
+
+    // ---------------------------------------------------
+
+    float t;
 	float s;
 	bool stillCounting;
 
@@ -97,4 +107,19 @@ public class HUDController : MonoBehaviour
 	{
 		healthBar.fillAmount -= 0.1f;
 	}
+
+    public void Objective1()
+    {
+        firstObjectiveText.text = "! Visit the Blockade.";
+    }
+
+    public void Objective2()
+    {
+        secondObjectiveText.text = "! Visit the Broken Pass.";
+    }
+
+    public void Objective3()
+    {
+        thirdObjectiveText.text = "! Visit the Parking Lot.";
+    }
 }

@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         //Trigger the Run -> Idle transition if the distance between the destination point and current position is less than...
         dist = Vector3.Distance(hit.point, transform.position);
-        Debug.Log("Distance:" + dist);
+        //Debug.Log("Distance:" + dist);
         if (dist < 1f)
         {
             myAnim.SetBool("isRunning", false);
@@ -71,5 +71,20 @@ public class PlayerController : MonoBehaviour
 			col.gameObject.SetActive (false);
 			HUDctrl.GetComponent<HUDController> ().IncrementStarCount ();
 		}
-	}
+        else if (col.gameObject.tag == "Place1")
+        {
+            col.gameObject.SetActive (false);
+            HUDctrl.GetComponent<HUDController> ().Objective1 ();
+        }
+        else if (col.gameObject.tag == "Place2")
+        {
+            col.gameObject.SetActive(false);
+            HUDctrl.GetComponent<HUDController>().Objective2();
+        }
+        else if (col.gameObject.tag == "Place3")
+        {
+            col.gameObject.SetActive(false);
+            HUDctrl.GetComponent<HUDController>().Objective3();
+        }
+    }
 }

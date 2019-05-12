@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Places : MonoBehaviour 
 {
-
 	public AudioClip clip;
 
 	// When the object is hit col saves player info
