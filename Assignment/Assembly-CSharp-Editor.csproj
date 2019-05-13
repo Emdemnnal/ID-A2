@@ -57,7 +57,7 @@
      <Compile Include="Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
      <Compile Include="Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>H:/Bournemouth University/Interface Design/Assignment/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>H:/Bournemouth University/Interface Design/Assignment 2/ID-A2/Assignment/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>

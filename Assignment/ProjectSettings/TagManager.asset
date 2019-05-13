@@ -10,6 +10,9 @@ TagManager:
   - Place1
   - Place2
   - Place3
+  - HUDController
+  - Special
+  - PopUpMenuController
   layers:
   - Default
   - TransparentFX

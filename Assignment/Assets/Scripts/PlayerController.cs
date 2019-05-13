@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     Quaternion newRotation;
     float rotSpeed = 5f;    
 
-	public GameObject HUDctrl;
+	GameObject HUDctrl;
+	GameObject PopUpCtrl;
 
     void Start()
     {
@@ -27,6 +28,9 @@ public class PlayerController : MonoBehaviour
  
 	void Update () 
 	{
+		HUDctrl = GameObject.FindGameObjectWithTag ("HUDController");
+		PopUpCtrl = GameObject.FindGameObjectWithTag ("PopUpMenuController");
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -41,6 +45,8 @@ public class PlayerController : MonoBehaviour
                 newRotation.z = 0.0f;
 
                 myAnim.SetBool("isRunning", true);
+
+				HUDctrl.GetComponent<HUDController> ().StepCounterEnabler ();
             }
         }
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
@@ -51,6 +57,7 @@ public class PlayerController : MonoBehaviour
         if (dist < 1f)
         {
             myAnim.SetBool("isRunning", false);
+			HUDctrl.GetComponent<HUDController> ().StepCounterDisabler ();
         }
     }
 
@@ -86,5 +93,19 @@ public class PlayerController : MonoBehaviour
             col.gameObject.SetActive(false);
             HUDctrl.GetComponent<HUDController>().Objective3();
         }
+		// Makes the popup appear when player enters radius.
+		else if (col.gameObject.tag == "Special") 
+		{
+			PopUpCtrl.GetComponent<PopUpMenuController>().Activate ();
+		}
     }
+
+	void OnTriggerExit(Collider col)
+	{
+		// Makes popup disappear when player leaves radius.
+		if (col.gameObject.tag == "Special") 
+		{
+			PopUpCtrl.GetComponent<PopUpMenuController>().Deactivate ();
+		}
+	}
 }

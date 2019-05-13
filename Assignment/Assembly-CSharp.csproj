@@ -59,13 +59,16 @@
      <Compile Include="Assets\Scripts\CollectableController.cs" />
      <Compile Include="Assets\Scripts\CollectablesData.cs" />
      <Compile Include="Assets\Scripts\Collectible.cs" />
+     <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\HUDController.cs" />
+     <Compile Include="Assets\Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Places.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PopUpMenuController.cs" />
      <Compile Include="Assets\Scripts\RotateCanvas.cs" />
      <Compile Include="Assets\Scripts\ToggleScene.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>H:/Bournemouth University/Interface Design/Assignment/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>H:/Bournemouth University/Interface Design/Assignment 2/ID-A2/Assignment/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
